@@ -23,41 +23,4 @@ This main file, main.go should receive in the command line argument and parse th
 
  Please fill `input1.txt` and `input2.txt` with the input commands and use those files in `run.bat` or `run.sh`. Replace `./geektrust sample_input/input1.txt` with `./geektrust sample_input/input2.txt` to run the test case from the second file. 
 
- # How to execute the unit tests
 
- Mocha based test cases are executed with the following command from the root folder
-`mocha test`
-
-Jest based test cases are executed with the following command from the root folder
-`jest`
-
-# Typescript
-
-Your main file should be named as `geektrust.ts`.
-
-As of now we only support Typescript under the NPM build system. This will require you to compile your typescript program into javascript.
-
-We run the commands `npm install --silent`, `npm start --silent` and `npm test --silent`.
-
-Please ensure that the npm install commands creates the file `geektrust.js` from your geektrust.ts file. The npm start command should then execute this `geektrust.js` file.
-
-In your `package.json` file make sure you have an entry for the install, start and test script.
-
-* The install command should install the dependencies and also build the `geektrust.js` file.
-* The start command will execute the program.
-* The test command should execute all the unit tests present
-
-```
-"scripts": {
-    "install" :"<command to create your geektrust.js file>",
-    "start": "node geektrust.js",
-    "test": "mocha"
-}
-```
-
-Note: If you create the geektrust.js file in some other folder (like dist/, build/ or out/)other than the main folder, then please appropriately edit the start command.
-
-# Help
-
-You can refer our help documents [here](https://help.geektrust.com)
-You can read build instructions [here](https://github.com/geektrust/coding-problem-artefacts/tree/master/NodeJS)
